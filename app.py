@@ -207,7 +207,7 @@ with tab6:
 		
         if E_t8 > 0:
             
-            E_p8 = (Ep_t8} / E_t8)*100
+            E_p8 = (Ep_t8 / E_t8)*100
             
             st.success(f"¡Cálculo exitoso! El porcentaje de egresados con promedio >= 8 es **{E_p8:.2f} %**.")
            
