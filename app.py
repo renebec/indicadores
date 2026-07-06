@@ -24,7 +24,7 @@ with tab1:
     st.header("Conceptos y Fórmulas")
     st.write("Aquí puedes entender la matemática detrás de los cálculos que realiza esta app.")
     
-    st.subheader("1. Abandono escolar en el ciclo t")
+    st.subheader("1. Abandono escolar en el ciclo (t)")
     st.write("Se refiere al porcentaje de alumnos que abandonan las actividades escolares en el ciclo escolar, con respecto a la matrícula de inicio del mismo:")
     st.latex(r"Abandono = 1 - \frac{( M_{t+1} + MN_{t+1} ) + E_t} {M_t} * 100")
     st.markdown("""
@@ -35,7 +35,7 @@ with tab1:
     *   **$M_t$**: Matrícula de inicio en el cilco escolar (t).
     """)
     
-    st.subheader("2. Aprobación en el ciclo t")
+    st.subheader("2. Aprobación en el ciclo (t)")
     st.write("Porcentaje de alumnos que han aprobado la totalidad de asignaturas y/o módulos al finalizar el ciclo escolar y previo a los períodos de recuperación:")
     st.latex(r"Aprobación = \frac{ A_t + A_{mid}}{N_t + N_{mid}} * 100") 
     st.markdown("""
@@ -46,7 +46,7 @@ with tab1:
     *   **$M_{mid}$**: Número de alumnos a mitad del ciclo escolar (t)
     """)
     
-    st.subheader("3. Reprobación en el ciclo t")
+    st.subheader("3. Reprobación en el ciclo (t)")
     st.write("Mide la eficiencia del sistema educativo y puede convertirse en la base de cálculo de tasas de admisión, promoción y desersión:")
     st.latex(r"Reprobación = \frac{ R_t + R_{mid}}{N_t + N_{mid}} * 100")
     st.markdown("""
@@ -57,7 +57,7 @@ with tab1:
     *   **$M_{mid}$**: Número de alumnos a mitad del ciclo escolar (t)
     """)
     
-    st.subheader("4. Eficiencia terminal en el ciclo t")
+    st.subheader("4. Eficiencia terminal en el ciclo (t)")
     st.write("Mide la razón de egresados en el ciclo t con respecto al total de nuevos ingresos en (t-2):")
     st.latex(r"ET = \frac{ E_gt }{MN_gt} * 100")
     st.markdown("""
