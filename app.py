@@ -48,12 +48,12 @@ with tab1:
     
     st.subheader("3. Reprobación en el ciclo (t)")
     st.write("Mide la eficiencia del sistema educativo y puede convertirse en la base de cálculo de tasas de admisión, promoción y desersión:")
-    st.latex(r"Reprobación = \frac{ R_t + R_{mid}}{N_t + N_{mid}} * 100")
+    st.latex(r"Reprobación = \frac{ R_t + R_{mid}}{M_t + M_{mid}} * 100")
     st.markdown("""
     Donde:
-    *   **$A_0$**: Número de alumnos aprobados al final del ciclo escolar (t).
-    *   **$A_{mid}$**: Número de alumnos aprobados a mitad del cilo escolar (t).
-    *   **$M_0$**: Matrícula al inicio del ciclo escolar (t)
+    *   **$R_t$**: Número de alumnos aprobados al final del ciclo escolar (t).
+    *   **$R_{mid}$**: Número de alumnos aprobados a mitad del cilo escolar (t).
+    *   **$M_t$**: Matrícula al inicio del ciclo escolar (t)
     *   **$M_{mid}$**: Número de alumnos a mitad del ciclo escolar (t)
     """)
     
