@@ -77,7 +77,7 @@ with tab1:
     
     st.subheader("6. % Docentes con actividades de planeación didáctica en el ciclo (t)")
     st.write("Mide la razón de docentes que registraron participación en actividades de planeación didáctica:")
-    st.latex(r"DocPlanAct = \frac{ Dp_t }{D_t} * 100")
+    st.latex(r"DocPlanAct = \frac{ D_{pt} }{D_t} * 100")
     st.markdown("""
     Donde:
     *   **$D_{pt}$**: Número de docentes con participación en actividades de planeación didáctica en el ciclo escolar (t).
@@ -86,10 +86,10 @@ with tab1:
     
     st.subheader("7. % Docentes que entregaron planeación didáctica en el ciclo (t)")
     st.write("Mide la razón de docentes que entregaron planeación didáctica en el ciclo (t):")
-    st.latex(r"DocPlanEn = \frac{ Dcp_t }{D_t} * 100")
+    st.latex(r"DocPlanEn = \frac{ D_{cpt} }{D_t} * 100")
     st.markdown("""
     Donde:
-    *   **$Dmcc_t$**: Número de docentes que entregaron planeación didáctica en el ciclo (t).
+    *   **$D_{cpt}$**: Número de docentes que entregaron planeación didáctica en el ciclo (t).
     *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
     
