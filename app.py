@@ -29,7 +29,7 @@ with tab1:
     st.latex(r"Abandono = 1 - \frac{( M_{t+1} + MN_{t+1} ) + E_t} {M_t} * 100")
     st.markdown("""
     Donde:
-    *   **$M_{t+1}**: Matrícula de inicio en el cilco escolar (t + 1).
+    *   **$M_{t+1}$**: Matrícula de inicio en el cilco escolar (t + 1).
     *   **$MN_{t+1}$**: matrícula de nuevo ingreso a primer semestre en el ciclo escolar (t + 1).
     *   **$E_t$**: Número de alumnos que egresaron en el cliclo escolar (t).
     *   **$M_t$**: Matrícula de inicio en el cilco escolar (t).
