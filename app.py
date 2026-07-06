@@ -59,20 +59,20 @@ with tab1:
     
     st.subheader("4. Eficiencia terminal en el ciclo (t)")
     st.write("Mide la razón de egresados en el ciclo t con respecto al total de nuevos ingresos en (t-2):")
-    st.latex(r"ET = \frac{ E_gt }{MN_gt} * 100")
+    st.latex(r"ET = \frac{ E_{gt} }{MN_{gt}} * 100")
     st.markdown("""
     Donde:
-    *   **$E_gt$**: Número de alumnos egresados al final del ciclo escolar (t).
-    *   **$MN_gt$**: Matrícula de nuevo ingreso en el ciclo (t-2).
+    *   **$E_{gt}$**: Número de alumnos egresados al final del ciclo escolar (t).
+    *   **$MN_{gt}$**: Matrícula de nuevo ingreso en el ciclo (t-2).
     """)
     
     st.subheader("5. % de egresados con promeidio >= 8 en el ciclo (t)")
     st.write("Mide la razón de egresados que obtuvieron promedio >= 8 en el ciclo t:")
-    st.latex(r"Egr8 = \frac{ Ep_t8 }{E_t8} * 100")
+    st.latex(r"E_{gr8} = \frac{ Ep_t8 }{E_t8} * 100")
     st.markdown("""
     Donde:
-    *   **$Ep_t8$**: Número de egresados con promedio >= 8 en el ciclo escolar (t).
-    *   **$E_t8$**: Número de egresados en el ciclo (t).
+    *   **$Ep_{t8}$**: Número de egresados con promedio >= 8 en el ciclo escolar (t).
+    *   **$E_{t8}$**: Número de egresados en el ciclo (t).
     """)
     
     st.subheader("6. % Docentes con actividades de planeación didáctica en el ciclo (t)")
