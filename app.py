@@ -66,7 +66,7 @@ with tab1:
     *   **$MN_gt$**: Matrícula de nuevo ingreso en el ciclo (t-2).
     """)
     
-    st.subheader("5. % de egresados con promeidio >= 8")
+    st.subheader("5. % de egresados con promeidio >= 8 en el ciclo (t)")
     st.write("Mide la razón de egresados que obtuvieron promedio >= 8 en el ciclo t:")
     st.latex(r"Egr8 = \frac{ Ep_t8 }{E_t8} * 100")
     st.markdown("""
