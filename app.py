@@ -68,10 +68,10 @@ with tab1:
     
     st.subheader("5. % de egresados con promeidio >= 8 en el ciclo (t)")
     st.write("Mide la razón de egresados que obtuvieron promedio >= 8 en el ciclo t:")
-    st.latex(r"E_{gr8} = \frac{ Ep_t8 }{E_t8} * 100")
+    st.latex(r"E_{gr8} = \frac{ E_{pt8} }{E_{t8}} * 100")
     st.markdown("""
     Donde:
-    *   **$Ep_{t8}$**: Número de egresados con promedio >= 8 en el ciclo escolar (t).
+    *   **$E_{pt8}$**: Número de egresados con promedio >= 8 en el ciclo escolar (t).
     *   **$E_{t8}$**: Número de egresados en el ciclo (t).
     """)
     
@@ -80,7 +80,7 @@ with tab1:
     st.latex(r"DocPlanAct = \frac{ Dp_t }{D_t} * 100")
     st.markdown("""
     Donde:
-    *   **$Dp_t$**: Número de docentes con participación en actividades de planeación didáctica en el ciclo escolar (t).
+    *   **$D_{pt}$**: Número de docentes con participación en actividades de planeación didáctica en el ciclo escolar (t).
     *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
     
@@ -95,10 +95,10 @@ with tab1:
     
     st.subheader("8. % Docentes capacitados en el MCCEMS en el ciclo (t)")
     st.write("Mide la razón de docentes que en el ciclo (t) recibieron capacitación sore el MCCEMS:")
-    st.latex(r"DocMCC = \frac{ Dmcc_t }{D_t} * 100")
+    st.latex(r"DocMCC = \frac{ D_{mcct} }{D_t} * 100")
     st.markdown("""
     Donde:
-    *   **$Dmcc_t$**: Número de docentescapacitados en el MCCEMS en el ciclo (t).
+    *   **$D_{mcct}$**: Número de docentescapacitados en el MCCEMS en el ciclo (t).
     *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
 
@@ -112,8 +112,8 @@ with tab2:
     
     M_t1 = st.number_input("Matrícula al inicio de (t + 1):", min_value=0, value=600, step=1, key="M_t1ab")
     MN_t1 = st.number_input("Matrícula de nuevo ingreso en (t + 1)", min_value=0, value=300, step=1, key="MN_t1ab")
-    E_t = st.number_input("# Egresados en (t)", min_value=0, value=250, step=1, key="E_tab")
-    M_t = st.number_input("Matrícula al inicio de (t)", min_value=0, value=700, step=1, key="M_tab")
+    E_t = st.number_input("Número de egresados en el ciclo (t)", min_value=0, value=250, step=1, key="E_tab")
+    M_t = st.number_input("Matrícula al inicio del ciclo (t)", min_value=0, value=700, step=1, key="M_tab")
     
     if st.button("Calcular abandono", key="btn_aband"):
         if M_t > 0:
@@ -129,8 +129,8 @@ with tab3:
     st.header("Calcular % aprobación en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
-    A_t = st.number_input("# Aprobados al final del ciclo (t):", min_value=0, value=600, step=1, key="A_tapr")
-    A_mid = st.number_input("# Aprobados a mitad del ciclo (t)", min_value=0, value=300, step=1, key="A_midapr")
+    A_t = st.number_input("Número de aprobados al final del ciclo (t):", min_value=0, value=600, step=1, key="A_tapr")
+    A_mid = st.number_input("Número de aprobados a mitad del ciclo (t)", min_value=0, value=300, step=1, key="A_midapr")
     M_t = st.number_input("Matrícula al inicio de (t)", min_value=0, value=700, step=1, key="M_tapr")
     M_mid = st.number_input("Matrícula a mitad de (t)", min_value=0, value=700, step=1, key="M_midapr")
     
@@ -153,8 +153,8 @@ with tab4:
     st.header("Calcular % reprobación en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
-    R_t = st.number_input("# Reprobados al final de ciclo (t):", min_value=0, value=600, step=1, key="R_trep")
-    R_mid = st.number_input("# Reprobados a mitad del ciclo (t)", min_value=0, value=300, step=1, key="R_midrep")
+    R_t = st.number_input("Número de reprobados al final de ciclo (t):", min_value=0, value=600, step=1, key="R_trep")
+    R_mid = st.number_input("Número de reprobados a mitad del ciclo (t)", min_value=0, value=300, step=1, key="R_midrep")
     M_t = st.number_input("Matrícula al inicio de (t)", min_value=0, value=700, step=1, key="M_trep")
     M_mid = st.number_input("Matrícula a mitad de (t)", min_value=0, value=700, step=1, key="M_midrep")
     
@@ -177,7 +177,7 @@ with tab5:
     st.header("Calcular % eficiencia terminal en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
-    E_gt = st.number_input("# Egresados de la misma genración en el ciclo (t):", min_value=0, value=600, step=1, key="E_gt")
+    E_gt = st.number_input("Número de egresados de la misma genración en el ciclo (t):", min_value=0, value=600, step=1, key="E_gt")
     MN_gt = st.number_input("Matrícula de Nuevo Ingreso en ciclo (t - 2)", min_value=0, value=300, step=1, key="MN_gt")
 
     
@@ -199,17 +199,17 @@ with tab6:
     st.header("Calcular % de egresados con promedio  >= 8 en el cilco (t)")
     st.write("Introduce los parámetros:")
     
-    Ep_t8 = st.number_input("# Egresados en el ciclo (t) con promedio >= 8:", min_value=0, value=600, step=1, key="Ep_t8")
-    E_t8 = st.number_input("# Egresados en ciclo (t)", min_value=0, value=300, step=1, key="E_t8")
+    Ep_t8 = st.number_input("Número de egresados en el ciclo (t) con promedio >= 8:", min_value=0, value=600, step=1, key="Ep_t8")
+    E_t8 = st.number_input("Número de egresados en ciclo (t)", min_value=0, value=300, step=1, key="E_t8")
 
     
     if st.button("Calcular # promedios >= 8", key="btn_prom8"):
 		
         if E_t8 > 0:
             
-            et8 = (Ep_t8 / E_t8)*100
+            E_p8 = (Ep_t8} / E_t8)*100
             
-            st.success(f"¡Cálculo exitoso! El porcentaje de egresados con promedio >= 8 es **{et8:.2f} %**.")
+            st.success(f"¡Cálculo exitoso! El porcentaje de egresados con promedio >= 8 es **{E_p8:.2f} %**.")
            
         else:
             st.error("Revisa tus datos.")
@@ -221,8 +221,8 @@ with tab7:
     st.header("Calcular % docentes que participan en actividades de planeación didáctica en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
-    Dp_t = st.number_input("# Docentes que participan en actividades de planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dp_t")
-    D_t = st.number_input("# Docentes frente a grupo en ciclo (t)", min_value=0, value=300, step=1, key="D_t")
+    Dp_t = st.number_input("Número de docentes que participan en actividades de planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dp_t")
+    D_t = st.number_input("Número de docentes frente a grupo en ciclo (t)", min_value=0, value=300, step=1, key="D_t")
 
     
     if st.button("Calcular docentes en actividades de plan", key="btn_docplan"):
