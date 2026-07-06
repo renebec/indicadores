@@ -15,7 +15,7 @@ st.title("🧮 Cálculo de indicadores")
 st.write("Aquí se explican los cálculos que realiza la app.")
 
 # 2. CREACIÓN DE LAS PESTAÑAS (TABS)
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["📝 Notas", "️Abandono", "Aprobación", "Reprobación", "ET", "Egr > 8", "Doc Plan", "Doc Plan Design", "Doc MCC"])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["📝 Notas", "1 ️Abandono", "2 Aprobación", "3 Reprobación", "4 ET", "5 Egr > 8", "6 Doc Plan", "7 Doc Plan Design", "8 Doc MCC"])
 
 # =====================================================================
 # PESTAÑA 1: EXPLICACIÓN DE FÓRMULAS
@@ -62,7 +62,7 @@ with tab1:
 # =====================================================================
 with tab2:
 	
-    st.header("Calcular abandono")
+    st.header("Calcular % abandono")
     st.write("Introduce los parámetros:")
     
     M_t1 = st.number_input("<M_1> Matrícula al inicio de (t + 1):", min_value=0, value=600, step=1, key="M_t1ab")
@@ -81,7 +81,7 @@ with tab2:
 # PESTAÑA 3: CÁLCULO DE APROBACIÓN
 # =====================================================================
 with tab3:
-    st.header("Calcular aprobación")
+    st.header("Calcular % aprobación")
     st.write("Introduce los parámetros:")
     
     A_t = st.number_input("<A_0> Aprobados al final del ciclo (t):", min_value=0, value=600, step=1, key="A_tapr")
@@ -105,7 +105,7 @@ with tab3:
 # PESTAÑA 4: CÁLCULO DE REPROBACIÓN
 # =====================================================================
 with tab4:
-    st.header("Calcular reprobación")
+    st.header("Calcular % reprobación")
     st.write("Introduce los parámetros:")
     
     R_t = st.number_input("<Rt> Reprobados al final de ciclo (t):", min_value=0, value=600, step=1, key="R_trep")
@@ -129,7 +129,7 @@ with tab4:
 # PESTAÑA 5: CÁLCULO DE EFICIENCIA TERMINAL (ET)
 # =====================================================================
 with tab5:
-    st.header("Calcular eficiencia terminal")
+    st.header("Calcular % eficiencia terminal")
     st.write("Introduce los parámetros:")
     
     E_gt = st.number_input("<E_gt> Egresados de la misma genración en el ciclo (t):", min_value=0, value=600, step=1, key="E_gt")
@@ -151,7 +151,7 @@ with tab5:
 # PESTAÑA 6: CÁLCULO DE EGRESADOS CON PROMEDIO >= 8
 # =====================================================================
 with tab6:
-    st.header("Calcular # promedios  >= 8")
+    st.header("Calcular % de egresados con promedios  >= 8")
     st.write("Introduce los parámetros:")
     
     Ep_t8 = st.number_input("<Ep_t8> Egresados en el ciclo (t) con promedio >= 8:", min_value=0, value=600, step=1, key="Ep_t8")
@@ -173,7 +173,7 @@ with tab6:
 # PESTAÑA 7: CÁLCULO DE DOCENTES PARTICIPANTES EN PLANEACIÓN DIDÁCTICA
 # =====================================================================
 with tab7:
-    st.header("Calcular docentes que participan en actividades de planeación didáctica")
+    st.header("Calcular % docentes que participan en actividades de planeación didáctica")
     st.write("Introduce los parámetros:")
     
     Dp_t = st.number_input("<Dp_t> Docentes que participan en actividades de planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dp_t")
@@ -186,7 +186,7 @@ with tab7:
             
             docplan = (Dp_t / D_t)*100
             
-            st.success(f"¡Cálculo exitoso! El porcentaje de docentes que participan en actividades de planeación didáctica es **{docplan:.2f} %**.")
+            st.success(f"¡Cálculo exitoso! El % de docentes que participan en actividades de planeación didáctica es **{docplan:.2f} %**.")
            
         else:
             st.error("Revisa tus datos.")
@@ -196,20 +196,20 @@ with tab7:
 # PESTAÑA 8: CÁLCULO DE DOCENTES QUE PRESENTAN PLANEACIÓN DIDÁCTICA
 # =====================================================================
 with tab8:
-    st.header("Calcular docentes con planeación didáctica")
+    st.header("Calcular % docentes con planeación didáctica")
     st.write("Introduce los parámetros:")
     
-    Dcp_t = st.number_input("<Dcp_t> Docentes que presentaron planeación didáctica en ciclo (t):", min_value=0, value=600, step=1, key="Dcp_t")
+    Dcp_t = st.number_input("<Dcp_t> Docentes que presentaron planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dcp_t")
     D_t = st.number_input("<D_t> Docentes frente a grupo en ciclo (t)", min_value=0, value=300, step=1, key="D_tcon")
 
     
-    if st.button("Calcular docentes con planeación", key="btn_conplan"):
+    if st.button("Calcular docentes con planeaciones", key="btn_conplan"):
 		
         if D_t > 0:
             
             doccon = (Dcp_t / D_t)*100
             
-            st.success(f"¡Cálculo exitoso! El porcentaje de docentes con planeación didáctica es **{doccon:.2f} %**.")
+            st.success(f"¡Cálculo exitoso! El % de docentes con planeaciones didáctica es **{doccon:.2f} %**.")
            
         else:
             st.error("Revisa tus datos.")
@@ -218,20 +218,20 @@ with tab8:
 # PESTAÑA 9: CÁLCULO DE DOCENTES FORMADOS EN MCCEMS
 # =====================================================================
 with tab9:
-    st.header("Calcular docentes capacitados en MCCEMS")
+    st.header("Calcular % de docentes capacitados en MCCEMS")
     st.write("Introduce los parámetros:")
     
     Dmcc_t = st.number_input("<Dcp_t> Docentes capacitados en MCCEMS en ciclo (t):", min_value=0, value=600, step=1, key="Dmcc_t")
     D_t = st.number_input("<D_t> Docentes frente a grupo en ciclo (t)", min_value=0, value=300, step=1, key="D_tmcc")
 
     
-    if st.button("Calcular docentescapacitados en MCCEMS", key="btn_mccems"):
+    if st.button("Calcular % docentes capacitados en MCCEMS", key="btn_mccems"):
 		
         if D_t > 0:
             
             docmcc = (Dmcc_t / D_t)*100
             
-            st.success(f"¡Cálculo exitoso! El porcentaje de docentes capacitados en MCCEMSa es **{docmcc:.2f} %**.")
+            st.success(f"¡Cálculo exitoso! El % de docentes capacitados en MCCEMSa es **{docmcc:.2f} %**.")
            
         else:
             st.error("Revisa tus datos.")
