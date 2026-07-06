@@ -11,11 +11,11 @@ st.set_page_config(page_title="Indicadores", page_icon="🧮")
 
 
 # Título de cabecera principal
-st.title("🧮 Cálculo de indicadores")
-st.write("Aquí se explican los cálculos que realiza la app.")
+st.title("🧮 Cálculo de indicadores en la EMS")
+st.write("En esta sección se explican los diferentes indicadores.")
 
 # 2. CREACIÓN DE LAS PESTAÑAS (TABS)
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["📝 Notas", "1 ️Abandono", "2 Aprobación", "3 Reprobación", "4 ET", "5 Egr > 8", "6 Doc Plan", "7 Doc Plan Design", "8 Doc MCC"])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["📝 Notas", "1.Abandono", "2.Aprobación", "3.Reprobación", "4.ET", "5.Egr > 8", "6.DocActPlan", "7.DocPlanEn", "8.DocMCC"])
 
 # =====================================================================
 # PESTAÑA 1: EXPLICACIÓN DE FÓRMULAS
@@ -24,7 +24,7 @@ with tab1:
     st.header("Conceptos y Fórmulas")
     st.write("Aquí puedes entender la matemática detrás de los cálculos que realiza esta app.")
     
-    st.subheader("1. Abandono escolar")
+    st.subheader("1. Abandono escolar en el ciclo t")
     st.write("Se refiere al porcentaje de alumnos que abandonan las actividades escolares en el ciclo escolar, con respecto a la matrícula de inicio del mismo:")
     st.latex(r"Abandono = 1 - \frac{( M_{t+1} + MN_{t+1} ) + E_t} {M_t} * 100")
     st.markdown("""
@@ -35,7 +35,7 @@ with tab1:
     *   **$M_t$**: Matrícula de inicio en el cilco escolar (t).
     """)
     
-    st.subheader("2. Aprobación")
+    st.subheader("2. Aprobación en el ciclo t")
     st.write("Porcentaje de alumnos que han aprobado la totalidad de asignaturas y/o módulos al finalizar el ciclo escolar y previo a los períodos de recuperación:")
     st.latex(r"Aprobación = \frac{ A_t + A_{mid}}{N_t + N_{mid}} * 100") 
     st.markdown("""
@@ -46,15 +46,60 @@ with tab1:
     *   **$M_{mid}$**: Número de alumnos a mitad del ciclo escolar (t)
     """)
     
-    st.subheader("3. Reprobación")
+    st.subheader("3. Reprobación en el ciclo t")
     st.write("Mide la eficiencia del sistema educativo y puede convertirse en la base de cálculo de tasas de admisión, promoción y desersión:")
-    st.latex(r"Rprobación = \frac{ R_t + R_{mid}}{N_t + N_{mid}} * 100")
+    st.latex(r"Reprobación = \frac{ R_t + R_{mid}}{N_t + N_{mid}} * 100")
     st.markdown("""
     Donde:
     *   **$A_0$**: Número de alumnos aprobados al final del ciclo escolar (t).
     *   **$A_{mid}$**: Número de alumnos aprobados a mitad del cilo escolar (t).
     *   **$M_0$**: Matrícula al inicio del ciclo escolar (t)
     *   **$M_{mid}$**: Número de alumnos a mitad del ciclo escolar (t)
+    """)
+    
+    st.subheader("4. Eficiencia terminal en el ciclo t")
+    st.write("Mide la razón de egresados en el ciclo t con respecto al total de nuevos ingresos en (t-2):")
+    st.latex(r"ET = \frac{ E_gt }{MN_gt} * 100")
+    st.markdown("""
+    Donde:
+    *   **$E_gt$**: Número de alumnos egresados al final del ciclo escolar (t).
+    *   **$MN_gt$**: Matrícula de nuevo ingreso en el ciclo (t-2).
+    """)
+    
+    st.subheader("5. % de egresados con promeidio >= 8")
+    st.write("Mide la razón de egresados que obtuvieron promedio >= 8 en el ciclo t:")
+    st.latex(r"Egr8 = \frac{ Ep_t8 }{E_t8} * 100")
+    st.markdown("""
+    Donde:
+    *   **$Ep_t8$**: Número de egresados con promedio >= 8 en el ciclo escolar (t).
+    *   **$E_t8$**: Número de egresados en el ciclo (t).
+    """)
+    
+    st.subheader("6. % Docentes con actividades de planeación didáctica en el ciclo (t)")
+    st.write("Mide la razón de docentes que registraron participación en actividades de planeación didáctica:")
+    st.latex(r"DocPlanAct = \frac{ Dp_t }{D_t} * 100")
+    st.markdown("""
+    Donde:
+    *   **$Dp_t$**: Número de docentes con participación en actividades de planeación didáctica en el ciclo escolar (t).
+    *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
+    """)
+    
+    st.subheader("7. % Docentes que entregaron planeación didáctica en el ciclo (t)")
+    st.write("Mide la razón de docentes que entregaron planeación didáctica en el ciclo (t):")
+    st.latex(r"DocPlanEn = \frac{ Dcp_t }{D_t} * 100")
+    st.markdown("""
+    Donde:
+    *   **$Dmcc_t$**: Número de docentes que entregaron planeación didáctica en el ciclo (t).
+    *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
+    """)
+    
+    st.subheader("8. % Docentes capacitados en el NMCC en el ciclo (t)")
+    st.write("Mide la razón de docentes que en el ciclo (t) recibieron capacitación sore el NMCC:")
+    st.latex(r"DocMCC = \frac{ Dmcc_t }{D_t} * 100")
+    st.markdown("""
+    Donde:
+    *   **$Dmcc_t$**: Número de docentescapacitados en el NMCC en el ciclo (t).
+    *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
 
 # =====================================================================
@@ -151,7 +196,7 @@ with tab5:
 # PESTAÑA 6: CÁLCULO DE EGRESADOS CON PROMEDIO >= 8
 # =====================================================================
 with tab6:
-    st.header("Calcular % de egresados con promedios  >= 8")
+    st.header("Calcular % de egresados con promedio  >= 8")
     st.write("Introduce los parámetros:")
     
     Ep_t8 = st.number_input("<Ep_t8> Egresados en el ciclo (t) con promedio >= 8:", min_value=0, value=600, step=1, key="Ep_t8")
@@ -193,13 +238,13 @@ with tab7:
 
 
 # =====================================================================
-# PESTAÑA 8: CÁLCULO DE DOCENTES QUE PRESENTAN PLANEACIÓN DIDÁCTICA
+# PESTAÑA 8: CÁLCULO DE DOCENTES QUE ENTREGAN PLANEACIÓN DIDÁCTICA
 # =====================================================================
 with tab8:
     st.header("Calcular % docentes con planeación didáctica")
     st.write("Introduce los parámetros:")
     
-    Dcp_t = st.number_input("<Dcp_t> Docentes que presentaron planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dcp_t")
+    Dcp_t = st.number_input("<Dcp_t> Docentes que entregaron planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dcp_t")
     D_t = st.number_input("<D_t> Docentes frente a grupo en ciclo (t)", min_value=0, value=300, step=1, key="D_tcon")
 
     
@@ -209,7 +254,7 @@ with tab8:
             
             doccon = (Dcp_t / D_t)*100
             
-            st.success(f"¡Cálculo exitoso! El % de docentes con planeaciones didáctica es **{doccon:.2f} %**.")
+            st.success(f"¡Cálculo exitoso! El % de docentes con planeaciones didáctica entregadas es **{doccon:.2f} %**.")
            
         else:
             st.error("Revisa tus datos.")
