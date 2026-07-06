@@ -93,12 +93,12 @@ with tab1:
     *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
     
-    st.subheader("8. % Docentes capacitados en el NMCC en el ciclo (t)")
-    st.write("Mide la razón de docentes que en el ciclo (t) recibieron capacitación sore el NMCC:")
+    st.subheader("8. % Docentes capacitados en el MCCEMS en el ciclo (t)")
+    st.write("Mide la razón de docentes que en el ciclo (t) recibieron capacitación sore el MCCEMS:")
     st.latex(r"DocMCC = \frac{ Dmcc_t }{D_t} * 100")
     st.markdown("""
     Donde:
-    *   **$Dmcc_t$**: Número de docentescapacitados en el NMCC en el ciclo (t).
+    *   **$Dmcc_t$**: Número de docentescapacitados en el MCCEMS en el ciclo (t).
     *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
 
@@ -263,7 +263,7 @@ with tab8:
 # PESTAÑA 9: CÁLCULO DE DOCENTES FORMADOS EN MCCEMS
 # =====================================================================
 with tab9:
-    st.header("Calcular % de docentes capacitados en NMCCEMS en el ciclo (t)")
+    st.header("Calcular % de docentes capacitados en MCCEMS en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     Dmcc_t = st.number_input("# Docentes capacitados en MCCEMS en ciclo (t):", min_value=0, value=600, step=1, key="Dmcc_t")
