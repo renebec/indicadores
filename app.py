@@ -107,7 +107,7 @@ with tab1:
 # =====================================================================
 with tab2:
 	
-    st.header("Calcular % abandono")
+    st.header("Calcular % abandono en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     M_t1 = st.number_input("<M_1> Matrícula al inicio de (t + 1):", min_value=0, value=600, step=1, key="M_t1ab")
@@ -126,7 +126,7 @@ with tab2:
 # PESTAÑA 3: CÁLCULO DE APROBACIÓN
 # =====================================================================
 with tab3:
-    st.header("Calcular % aprobación")
+    st.header("Calcular % aprobación en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     A_t = st.number_input("<A_0> Aprobados al final del ciclo (t):", min_value=0, value=600, step=1, key="A_tapr")
@@ -150,7 +150,7 @@ with tab3:
 # PESTAÑA 4: CÁLCULO DE REPROBACIÓN
 # =====================================================================
 with tab4:
-    st.header("Calcular % reprobación")
+    st.header("Calcular % reprobación en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     R_t = st.number_input("<Rt> Reprobados al final de ciclo (t):", min_value=0, value=600, step=1, key="R_trep")
@@ -174,7 +174,7 @@ with tab4:
 # PESTAÑA 5: CÁLCULO DE EFICIENCIA TERMINAL (ET)
 # =====================================================================
 with tab5:
-    st.header("Calcular % eficiencia terminal")
+    st.header("Calcular % eficiencia terminal en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     E_gt = st.number_input("<E_gt> Egresados de la misma genración en el ciclo (t):", min_value=0, value=600, step=1, key="E_gt")
@@ -196,7 +196,7 @@ with tab5:
 # PESTAÑA 6: CÁLCULO DE EGRESADOS CON PROMEDIO >= 8
 # =====================================================================
 with tab6:
-    st.header("Calcular % de egresados con promedio  >= 8")
+    st.header("Calcular % de egresados con promedio  >= 8 en el cilco (t)")
     st.write("Introduce los parámetros:")
     
     Ep_t8 = st.number_input("<Ep_t8> Egresados en el ciclo (t) con promedio >= 8:", min_value=0, value=600, step=1, key="Ep_t8")
@@ -218,7 +218,7 @@ with tab6:
 # PESTAÑA 7: CÁLCULO DE DOCENTES PARTICIPANTES EN PLANEACIÓN DIDÁCTICA
 # =====================================================================
 with tab7:
-    st.header("Calcular % docentes que participan en actividades de planeación didáctica")
+    st.header("Calcular % docentes que participan en actividades de planeación didáctica en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     Dp_t = st.number_input("<Dp_t> Docentes que participan en actividades de planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dp_t")
@@ -241,7 +241,7 @@ with tab7:
 # PESTAÑA 8: CÁLCULO DE DOCENTES QUE ENTREGAN PLANEACIÓN DIDÁCTICA
 # =====================================================================
 with tab8:
-    st.header("Calcular % docentes con planeación didáctica")
+    st.header("Calcular % docentes con planeación didáctica en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     Dcp_t = st.number_input("<Dcp_t> Docentes que entregaron planeación didáctica en el ciclo (t):", min_value=0, value=600, step=1, key="Dcp_t")
@@ -263,7 +263,7 @@ with tab8:
 # PESTAÑA 9: CÁLCULO DE DOCENTES FORMADOS EN MCCEMS
 # =====================================================================
 with tab9:
-    st.header("Calcular % de docentes capacitados en MCCEMS")
+    st.header("Calcular % de docentes capacitados en NMCCEMS en el ciclo (t)")
     st.write("Introduce los parámetros:")
     
     Dmcc_t = st.number_input("<Dcp_t> Docentes capacitados en MCCEMS en ciclo (t):", min_value=0, value=600, step=1, key="Dmcc_t")
