@@ -154,7 +154,7 @@ with tab3:
             labels = ['Aprobación', 'No aprobación']
             values = [apro, 100 - apro]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=[ '#FFc55e', '#D6D1D0']) # Rojo y Verde
+             color_discrete_sequence=[ '#D6D1D0', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -215,7 +215,7 @@ with tab5:
             labels = ['Eficiencia Terminal', 'No egresaron']
             values = [et, 100 - et]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=[ '#FFc55e', '#D6D1D0']) # Rojo y gris
+             color_discrete_sequence=[  '#D6D1D0', '#FFc55e']) # Rojo y gris
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
