@@ -125,7 +125,7 @@ with tab2:
             labels = ['Abandono', 'Permanencia']
             values = [abandono, 100 - abandono]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
         else:
@@ -154,7 +154,7 @@ with tab3:
             labels = ['Aprobación', 'No aprobación']
             values = [apro, 100 - apro]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=[ '#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=[ '#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -185,7 +185,7 @@ with tab4:
             labels = ['Reprobación', 'No reprobación']
             values = [repro, 100 - repro]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -215,7 +215,7 @@ with tab5:
             labels = ['Eficiencia Terminal', 'No egresaron']
             values = [et, 100 - et]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=[  '#D6D1D0', '#FFc55e']) # Rojo y gris
+             color_discrete_sequence=[  '#C4F759', '#FFc55e']) # Rojo y gris
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -244,7 +244,7 @@ with tab6:
             labels = ['Egresados con promedio >= 8', 'Con promedio < 8']
             values = [E_p8, 100 - E_p8]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -303,7 +303,7 @@ with tab8:
             labels = ['Docentes que entregaron', 'No entregaron']
             values = [doccon, 100 - doccon]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -333,7 +333,7 @@ with tab9:
             labels = ['Docentes capacitados en MCC', 'No capacitados']
             values = [docmcc, 100 - docmcc]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
