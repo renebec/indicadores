@@ -12,8 +12,7 @@ st.set_page_config(page_title="Indicadores", page_icon="🧮")
 
 # Título de cabecera principal
 st.title("🧮 Cálculadora de indicadores para la EMS")
-st.html("<div style="font-size:10 px;color:#656565">by MC Héctor Becerril 2026
-	   </div>")
+st.html("<div style="font-size:10 px;color:#656565">by MC Héctor Becerril 2026</div>")
 st.write("Sección 1: explicación de los diferentes indicadores.")
 
 # 2. CREACIÓN DE LAS PESTAÑAS (TABS)
