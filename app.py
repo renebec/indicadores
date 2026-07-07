@@ -204,7 +204,7 @@ with tab6:
     E_t8 = st.number_input("Número de egresados en el ciclo (t)", min_value=0, value=300, step=1, key="E_t8")
 
     
-    if st.button("Calcular # promedios >= 8", key="btn_prom8"):
+    if st.button("Calcular % promedios >= 8", key="btn_prom8"):
 		
         if E_t8 > 0:
             
@@ -226,7 +226,7 @@ with tab7:
     D_t = st.number_input("Número de docentes frente a grupo en ciclo (t)", min_value=0, value=300, step=1, key="D_t")
 
     
-    if st.button("Calcular docentes en actividades de plan", key="btn_docplan"):
+    if st.button("Calcular docentes en actividades de planeaciones", key="btn_docplan"):
 		
         if D_t > 0:
             
@@ -271,7 +271,7 @@ with tab9:
     D_t = st.number_input("# Docentes frente a grupo en el ciclo (t)", min_value=0, value=300, step=1, key="D_tmcc")
 
     
-    if st.button("Calcular % docentes capacitados en MCCEMS en el ciclo (t)", key="btn_mccems"):
+    if st.button("Calcular % capacitados en MCCEMS", key="btn_mccems"):
 		
         if D_t > 0:
             
