@@ -11,8 +11,10 @@ st.set_page_config(page_title="Indicadores", page_icon="🧮")
 
 
 # Título de cabecera principal
-st.title("🧮 Cálculo de indicadores en la EMS")
-st.write("En esta sección se explican los diferentes indicadores.")
+st.title("🧮 Cálculadora de indicadores para la EMS")
+st.html("<div style="font-size:10px;color:#656565">by MC Héctor Becerril 2026
+	   </div>")
+st.write("Sección 1: explicación de los diferentes indicadores.")
 
 # 2. CREACIÓN DE LAS PESTAÑAS (TABS)
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["📝 Notas", "1.Abandono", "2.Aprobación", "3.Reprobación", "4.ET", "5.Egr > 8", "6.DocActPlan", "7.DocPlanEn", "8.DocMCC"])
