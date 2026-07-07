@@ -28,7 +28,7 @@ with tab1:
     
     st.subheader("1. % Abandono escolar en el ciclo (t)")
     st.write("Se refiere al porcentaje de alumnos que abandonan las actividades escolares en el ciclo escolar, con respecto a la matrícula de inicio del mismo:")
-    st.latex(r"Abandono = 1 - \frac{( M_{t+1} + MN_{t+1} ) + E_t} {M_t} * 100")
+    st.latex(r"Abandono = 1 - \frac{( M_{t+1} - MN_{t+1} ) + E_t} {M_t} * 100")
     st.markdown("""
     Donde:
     *   **$M_{t+1}$**: Matrícula de inicio en el cilco escolar (t + 1).
