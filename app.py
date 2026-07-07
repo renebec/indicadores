@@ -2,6 +2,7 @@ import streamlit as st
 import math
 import os
 import signal
+import plotly.express as px
 
 
 
@@ -120,6 +121,13 @@ with tab2:
         if M_t > 0:
             abandono = (1 - (((M_t1 - MN_t1) + E_t) / M_t)) * 100
             st.success(f"¡Cálculo exitoso! El abandono es **{abandono:.2f} %**.")
+            
+            labels = ['Abandono', 'Permanencia']
+            values = [abandono, 100 - abandono]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
         else:
             st.error("Revisa los datos ingresados.")
 
@@ -143,6 +151,12 @@ with tab3:
             apro = (num / den)*100
             
             st.success(f"¡Cálculo exitoso! El porcentaje de aprobación es **{apro:.2f} %**.")
+            labels = ['Aprobación', 'No aprobación']
+            values = [apro, 100 - apro]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=[ '#FFc55e', '#D6D1D0']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
            
         else:
             st.error("Revisa tus datos.")
@@ -167,6 +181,13 @@ with tab4:
             repro = (num / den)*100
             
             st.success(f"¡Cálculo exitoso! El porcentaje de reprobación es **{repro:.2f} %**.")
+            
+            labels = ['Reprobación', 'No reprobación']
+            values = [repro, 100 - repro]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
            
         else:
             st.error("Revisa tus datos.")
@@ -188,7 +209,15 @@ with tab5:
             
             et = (E_gt / MN_gt)*100
             
-            st.success(f"¡Cálculo exitoso! El porcentaje de eficiencia terminal es **{et:.2f} %**.")
+            st.success(f"¡Cálculo exitoso! La eficiencia terminal es de **{et:.2f} %**.")
+            
+
+            labels = ['Eficiencia Terminal', 'No egresaron']
+            values = [et, 100 - et]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=[ '#FFc55e', '#D6D1D0']) # Rojo y gris
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
            
         else:
             st.error("Revisa tus datos.")
@@ -211,6 +240,13 @@ with tab6:
             E_p8 = (Ep_t8 / E_t8)*100
             
             st.success(f"¡Cálculo exitoso! El porcentaje de egresados con promedio >= 8 es **{E_p8:.2f} %**.")
+            
+            labels = ['Egresados con promedio >= 8', 'Con promedio < 8']
+            values = [E_p8, 100 - E_p8]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
            
         else:
             st.error("Revisa tus datos.")
@@ -233,6 +269,13 @@ with tab7:
             docplan = (Dp_t / D_t)*100
             
             st.success(f"¡Cálculo exitoso! El % de docentes que participan en actividades de planeación didáctica es **{docplan:.2f} %**.")
+            
+            labels = ['Docentes participantes', 'No participaron']
+            values = [docplan, 100 - docplan]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
            
         else:
             st.error("Revisa tus datos.")
@@ -256,6 +299,14 @@ with tab8:
             doccon = (Dcp_t / D_t)*100
             
             st.success(f"¡Cálculo exitoso! El % de docentes con planeaciones didáctica entregadas es **{doccon:.2f} %**.")
+            
+            labels = ['Docentes que entregaron', 'No entregaron']
+            values = [doccon, 100 - doccon]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
+           
            
         else:
             st.error("Revisa tus datos.")
@@ -278,7 +329,13 @@ with tab9:
             docmcc = (Dmcc_t / D_t)*100
             
             st.success(f"¡Cálculo exitoso! El % de docentes capacitados en MCCEMSa es **{docmcc:.2f} %**.")
+            
+            labels = ['Docentes capacitados en MCC', 'No capacitados']
+            values = [docmcc, 100 - docmcc]
+            fig = px.pie(values=values, names=labels, hole=0.5, 
+             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+            fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
+            st.plotly_chart(fig, use_container_width=True)
            
         else:
             st.error("Revisa tus datos.")
-
