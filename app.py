@@ -99,7 +99,7 @@ with tab1:
     st.latex(r"DocMCC = \frac{ D_{mcct} }{D_t} * 100")
     st.markdown("""
     Donde:
-    *   **$D_{mcct}$**: Número de docentescapacitados en el MCCEMS en el ciclo (t).
+    *   **$D_{mcct}$**: Número de docentes capacitados en el MCCEMS en el ciclo (t).
     *   **$D_t$**: Número de docentes frente a grupo en el ciclo (t).
     """)
 
