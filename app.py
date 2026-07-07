@@ -241,10 +241,10 @@ with tab6:
             
             st.success(f"¡Cálculo exitoso! El porcentaje de egresados con promedio >= 8 es **{E_p8:.2f} %**.")
             
-            labels = ['Egresados con promedio >= 8', 'Con promedio < 8']
+            labels = ['Egresados con promedio > = 8', 'Con promedio menor a 8']
             values = [E_p8, 100 - E_p8]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=[ '#FFc55e', '#C4F759']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
@@ -273,7 +273,7 @@ with tab7:
             labels = ['Docentes participantes', 'No participaron']
             values = [docplan, 100 - docplan]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#D6D1D0', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
            
