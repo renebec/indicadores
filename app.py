@@ -12,7 +12,7 @@ st.set_page_config(page_title="Indicadores", page_icon="🧮")
 
 
 # Título de cabecera principal
-st.title("🧮 Cálculadora de indicadores para la EMS")
+st.title("🧮 Cálculadora de indicadores para la elaboración del PMC")
 st.html('<div style="text-align:right;font-size:10px;color:#888888">by MC Héctor Becerril 2026</div>')
 st.write("Julio 2026")
 
