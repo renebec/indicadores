@@ -125,7 +125,7 @@ with tab2:
             labels = ['Abandono', 'Permanencia']
             values = [abandono, 100 - abandono]
             fig = px.pie(values=values, names=labels, hole=0.5, 
-             color_discrete_sequence=['#C4F759', '#FFc55e']) # Rojo y Verde
+             color_discrete_sequence=['#C9F759', '#FFc55e']) # Rojo y Verde
             fig.update_layout(showlegend=True, height=300, margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
         else:
